@@ -10,7 +10,7 @@
 # My solution
 count = 100
 
-99. times do
+99.times do
   count -= 1
   if count > 1
     puts "#{count} bottles of beer on the wall. Take one down, pass it around,"
