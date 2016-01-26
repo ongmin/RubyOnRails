@@ -13,7 +13,7 @@ class List
   end
 
   def checkoff_task
-    return false unlcess @tasks.include? task
+    return false unless @tasks.include? task
   end
 
   def add_tag(new_tag)

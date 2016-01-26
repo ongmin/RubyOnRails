@@ -1,0 +1,32 @@
+
+<h1>The Magic 8 Ball...</h1>
+
+
+<%= image_tag "spider.png" %>
+
+
+
+<div class="container">
+<%= form_tag('/magic_ball', method: :get) do %>
+  <%= text_field_tag :question, nil, placeholder: "Ask me your question", class: 'question_class' %>
+  <%= submit_tag "Ask" %>
+<% end %>
+
+<% if params[:question].present? %>
+<p>
+You asked: <%= params[:question] %>
+</p>
+<% end %>
+</div>
+
+
+<div class="shadow"></div>
+
+<div class="epos">
+<div class="eball">
+  <div class="egrad"></div>
+  <div class="ewin"><div>
+  <div class="triangle"></div>
+  <div class="textbox"><%= @magic_answer %></div>
+</div>
+</div>

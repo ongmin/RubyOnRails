@@ -1,0 +1,12 @@
+<p>Your guess was: <%= params[:guess] %></p>
+
+<% if @result %>
+<p>Good guess! You got it right!</p>
+
+<% else %>
+
+<p>Oh no... You guessed wrongly... </p>
+
+<% end %>
+
+<%= link_to "Back", guess_secret_number_path %>
