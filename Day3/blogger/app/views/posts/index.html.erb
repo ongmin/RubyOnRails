@@ -1,0 +1,14 @@
+<h1>Welcome to my blog!</h1>
+
+<button>
+<%= link_to "New posts", new_post_path %><i class="fa fa-plus"></i>
+</button>
+
+<%= @posts.each do |post| %>
+  <h3><%= post.title %></h3>
+  <p>
+    <%= post.body %>
+  </p>
+
+  <%= link_to "See more", post_path(post.id) %>
+<% end %>
